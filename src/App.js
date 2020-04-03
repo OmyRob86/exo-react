@@ -5,9 +5,10 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Home from './pages/Home';
+import Home           from './pages/Home';
 import CreateComments from './pages/CreateComments';
 import DeleteComments from './pages/DeleteComments';
+import NotFound       from './pages/NotFound';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/"                component={Home} />
         <Route path="/comments/create" component={CreateComments} />
         <Route path="/comments/delete" component={DeleteComments} />
+        <Route path="*"                component={NotFound} />
       </Switch>
     </Router>
   );
