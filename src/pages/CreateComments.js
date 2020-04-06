@@ -11,8 +11,8 @@ const CreateComments = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("content : ", content);
-        console.log("author : ", author);
+        console.log("content : ",   content);
+        console.log("author : ",    author);
         console.log("articleId : ", articleId);
     }
 
