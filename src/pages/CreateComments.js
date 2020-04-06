@@ -5,13 +5,15 @@ import Form      from 'react-bootstrap/Form';
 import Button    from 'react-bootstrap/Button';
 
 const CreateComments = () => {
-    const [ content, setContent ] = useState("");
-    const [ author,  setAuthor  ] = useState("");
+    const [ content,   setContent   ] = useState("");
+    const [ author,    setAuthor    ] = useState("");
+    const [ articleId, setArticleId ] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("content : ", content);
         console.log("author : ", author);
+        console.log("articleId : ", articleId);
     }
 
     const handleChange = (event) => {
@@ -24,6 +26,9 @@ const CreateComments = () => {
                 break;
             case "author":
                 setAuthor(event.target.value);
+                break;
+            case "artilceId":
+                setArticleId(event.target.value);
                 break;
             // no default
         }
@@ -56,7 +61,7 @@ const CreateComments = () => {
                         type="number"
                         name="articleId"
                         onChange={handleChange}
-                        value={author}
+                        value={articleId}
                     />
                 </Form.Group>
                 <Button variant="primary" type="submit">Publier</Button>
