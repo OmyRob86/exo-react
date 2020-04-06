@@ -50,6 +50,15 @@ const CreateComments = () => {
                         value={author}
                     />
                 </Form.Group>
+                <Form.Group controlId="comment.articleId" >
+                    <Form.Label>Id de l'Article</Form.Label>
+                    <Form.Control
+                        type="number"
+                        name="articleId"
+                        onChange={handleChange}
+                        value={author}
+                    />
+                </Form.Group>
                 <Button variant="primary" type="submit">Publier</Button>
             </Form>
         </Container>
